@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B005707283F2FA80054304A /* MeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005706283F2FA80054304A /* MeCell.swift */; };
+		4B00570A283F3EA00054304A /* Me_HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005709283F3EA00054304A /* Me_HomeList.swift */; };
+		4B00570C283F51860054304A /* MePageHeaderV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00570B283F51860054304A /* MePageHeaderV.swift */; };
+		4B00570E283F57510054304A /* PersonalMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00570D283F57510054304A /* PersonalMessageVC.swift */; };
+		4B005710283F83A70054304A /* MeIconVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00570F283F83A70054304A /* MeIconVC.swift */; };
+		4B005712283F85AF0054304A /* ChangeNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005711283F85AF0054304A /* ChangeNickNameVC.swift */; };
 		4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */; };
 		4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5B283F245D00EE63FE /* ContentView.swift */; };
 		4BD7AD5E283F245E00EE63FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5D283F245E00EE63FE /* Assets.xcassets */; };
 		4BD7AD61283F245E00EE63FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7AD60283F245E00EE63FE /* Preview Assets.xcassets */; };
+		4BD7AD6D283F25A900EE63FE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD6C283F25A900EE63FE /* HomeVC.swift */; };
+		4BD7AD70283F25D200EE63FE /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD6F283F25D200EE63FE /* MeVC.swift */; };
+		4BD7AD73283F25E900EE63FE /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD72283F25E900EE63FE /* AddressVC.swift */; };
+		4BD7AD76283F25FD00EE63FE /* MessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD75283F25FD00EE63FE /* MessageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B005706283F2FA80054304A /* MeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCell.swift; sourceTree = "<group>"; };
+		4B005709283F3EA00054304A /* Me_HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me_HomeList.swift; sourceTree = "<group>"; };
+		4B00570B283F51860054304A /* MePageHeaderV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePageHeaderV.swift; sourceTree = "<group>"; };
+		4B00570D283F57510054304A /* PersonalMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalMessageVC.swift; sourceTree = "<group>"; };
+		4B00570F283F83A70054304A /* MeIconVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeIconVC.swift; sourceTree = "<group>"; };
+		4B005711283F85AF0054304A /* ChangeNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNickNameVC.swift; sourceTree = "<group>"; };
 		4BD7AD56283F245D00EE63FE /* ZXSwiftUI_Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXSwiftUI_Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXSwiftUI_ProductApp.swift; sourceTree = "<group>"; };
 		4BD7AD5B283F245D00EE63FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4BD7AD5D283F245E00EE63FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD7AD60283F245E00EE63FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4BD7AD6C283F25A900EE63FE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		4BD7AD6F283F25D200EE63FE /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
+		4BD7AD72283F25E900EE63FE /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
+		4BD7AD75283F25FD00EE63FE /* MessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B005708283F3E6F0054304A /* M */ = {
+			isa = PBXGroup;
+			children = (
+				4B005709283F3EA00054304A /* Me_HomeList.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 		4BD7AD4D283F245D00EE63FE = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +79,10 @@
 		4BD7AD58283F245D00EE63FE /* ZXSwiftUI_Product */ = {
 			isa = PBXGroup;
 			children = (
+				4BD7AD6A283F249600EE63FE /* Message */,
+				4BD7AD69283F248800EE63FE /* Address */,
+				4BD7AD68283F247F00EE63FE /* Me */,
+				4BD7AD67283F247700EE63FE /* Home */,
 				4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */,
 				4BD7AD5B283F245D00EE63FE /* ContentView.swift */,
 				4BD7AD5D283F245E00EE63FE /* Assets.xcassets */,
@@ -65,6 +97,84 @@
 				4BD7AD60283F245E00EE63FE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4BD7AD67283F247700EE63FE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD6B283F259300EE63FE /* VC */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4BD7AD68283F247F00EE63FE /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				4B005708283F3E6F0054304A /* M */,
+				4BD7AD77283F2E7E00EE63FE /* V */,
+				4BD7AD6E283F25B300EE63FE /* VC */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		4BD7AD69283F248800EE63FE /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD71283F25D700EE63FE /* VC */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		4BD7AD6A283F249600EE63FE /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD74283F25F300EE63FE /* VC */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		4BD7AD6B283F259300EE63FE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD6C283F25A900EE63FE /* HomeVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		4BD7AD6E283F25B300EE63FE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD6F283F25D200EE63FE /* MeVC.swift */,
+				4B00570D283F57510054304A /* PersonalMessageVC.swift */,
+				4B00570F283F83A70054304A /* MeIconVC.swift */,
+				4B005711283F85AF0054304A /* ChangeNickNameVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		4BD7AD71283F25D700EE63FE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD72283F25E900EE63FE /* AddressVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		4BD7AD74283F25F300EE63FE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD75283F25FD00EE63FE /* MessageVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		4BD7AD77283F2E7E00EE63FE /* V */ = {
+			isa = PBXGroup;
+			children = (
+				4B005706283F2FA80054304A /* MeCell.swift */,
+				4B00570B283F51860054304A /* MePageHeaderV.swift */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +247,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B00570A283F3EA00054304A /* Me_HomeList.swift in Sources */,
+				4B00570C283F51860054304A /* MePageHeaderV.swift in Sources */,
+				4BD7AD70283F25D200EE63FE /* MeVC.swift in Sources */,
+				4BD7AD6D283F25A900EE63FE /* HomeVC.swift in Sources */,
+				4B00570E283F57510054304A /* PersonalMessageVC.swift in Sources */,
+				4BD7AD73283F25E900EE63FE /* AddressVC.swift in Sources */,
+				4B005712283F85AF0054304A /* ChangeNickNameVC.swift in Sources */,
 				4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */,
+				4B005707283F2FA80054304A /* MeCell.swift in Sources */,
+				4B005710283F83A70054304A /* MeIconVC.swift in Sources */,
+				4BD7AD76283F25FD00EE63FE /* MessageVC.swift in Sources */,
 				4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +395,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +405,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +425,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +435,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

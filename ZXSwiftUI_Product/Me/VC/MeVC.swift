@@ -27,7 +27,7 @@ struct MeVC: View {
                 }.listRowBackground(Color.white)
             }
             //.listStyle(.grouped)
-            .edgesIgnoringSafeArea(.all)
+            .ignoresSafeArea(edges: .top)
             .navigationBarHidden(true).onAppear(perform: loadData)
     }
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var currentIndex = 3
+    @State var currentIndex = 1
     var body: some View {
         NavigationView{
             TabView(selection: $currentIndex) {

@@ -33,6 +33,15 @@
 		4B0057402840B2070054304A /* HikeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00573C2840B2070054304A /* HikeGraph.swift */; };
 		4B0057412840B2070054304A /* HikeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00573D2840B2070054304A /* HikeDetail.swift */; };
 		4B0057422840B2070054304A /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00573E2840B2070054304A /* HikeView.swift */; };
+		4B0057442840BA070054304A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057432840BA070054304A /* UserInfo.swift */; };
+		4B0057462840BCE30054304A /* UserDefault-Extern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057452840BCE30054304A /* UserDefault-Extern.swift */; };
+		4B0057482840CA5F0054304A /* SexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057472840CA5F0054304A /* SexPage.swift */; };
+		4B00574A2840D4D10054304A /* ChangePasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057492840D4D10054304A /* ChangePasswordPage.swift */; };
+		4B00574C28421C520054304A /* modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00574B28421C520054304A /* modifier.swift */; };
+		4B00574E28422D230054304A /* MessageSFInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00574D28422D230054304A /* MessageSFInfo.swift */; };
+		4B0057512842747A0054304A /* CavansPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057502842747A0054304A /* CavansPage.swift */; };
+		4B005754284309A50054304A /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005753284309A50054304A /* Tabbar.swift */; };
+		4B005756284313260054304A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005755284313260054304A /* Tab.swift */; };
 		4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */; };
 		4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5B283F245D00EE63FE /* ContentView.swift */; };
 		4BD7AD5E283F245E00EE63FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5D283F245E00EE63FE /* Assets.xcassets */; };
@@ -70,6 +79,16 @@
 		4B00573C2840B2070054304A /* HikeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeGraph.swift; sourceTree = "<group>"; };
 		4B00573D2840B2070054304A /* HikeDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeDetail.swift; sourceTree = "<group>"; };
 		4B00573E2840B2070054304A /* HikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeView.swift; sourceTree = "<group>"; };
+		4B0057432840BA070054304A /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		4B0057452840BCE30054304A /* UserDefault-Extern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault-Extern.swift"; sourceTree = "<group>"; };
+		4B0057472840CA5F0054304A /* SexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexPage.swift; sourceTree = "<group>"; };
+		4B0057492840D4D10054304A /* ChangePasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPage.swift; sourceTree = "<group>"; };
+		4B00574B28421C520054304A /* modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modifier.swift; sourceTree = "<group>"; };
+		4B00574D28422D230054304A /* MessageSFInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSFInfo.swift; sourceTree = "<group>"; };
+		4B00574F2842605C0054304A /* ZXSwiftUI-Product-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ZXSwiftUI-Product-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4B0057502842747A0054304A /* CavansPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavansPage.swift; sourceTree = "<group>"; };
+		4B005753284309A50054304A /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		4B005755284313260054304A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		4BD7AD56283F245D00EE63FE /* ZXSwiftUI_Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXSwiftUI_Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXSwiftUI_ProductApp.swift; sourceTree = "<group>"; };
 		4BD7AD5B283F245D00EE63FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				4B005709283F3EA00054304A /* Me_HomeList.swift */,
+				4B0057432840BA070054304A /* UserInfo.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -111,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				4B00571F28406AC30054304A /* ModelData.swift */,
+				4B0057452840BCE30054304A /* UserDefault-Extern.swift */,
+				4B00574B28421C520054304A /* modifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -161,6 +183,15 @@
 			path = Hikes;
 			sourceTree = "<group>";
 		};
+		4B0057522843099A0054304A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4B005753284309A50054304A /* Tabbar.swift */,
+				4B005755284313260054304A /* Tab.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		4BD7AD4D283F245D00EE63FE = {
 			isa = PBXGroup;
 			children = (
@@ -180,11 +211,13 @@
 		4BD7AD58283F245D00EE63FE /* ZXSwiftUI_Product */ = {
 			isa = PBXGroup;
 			children = (
+				4B0057522843099A0054304A /* Main */,
+				4B00574F2842605C0054304A /* ZXSwiftUI-Product-Info.plist */,
 				4B00571E28406AA80054304A /* Common */,
+				4BD7AD67283F247700EE63FE /* Home */,
 				4BD7AD6A283F249600EE63FE /* Message */,
 				4BD7AD69283F248800EE63FE /* Address */,
 				4BD7AD68283F247F00EE63FE /* Me */,
-				4BD7AD67283F247700EE63FE /* Home */,
 				4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */,
 				4BD7AD5B283F245D00EE63FE /* ContentView.swift */,
 				4BD7AD5D283F245E00EE63FE /* Assets.xcassets */,
@@ -254,6 +287,8 @@
 				4B00570D283F57510054304A /* PersonalMessageVC.swift */,
 				4B00570F283F83A70054304A /* MeIconVC.swift */,
 				4B005711283F85AF0054304A /* ChangeNickNameVC.swift */,
+				4B0057472840CA5F0054304A /* SexPage.swift */,
+				4B0057492840D4D10054304A /* ChangePasswordPage.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -272,6 +307,8 @@
 				4BD7AD75283F25FD00EE63FE /* MessageVC.swift */,
 				4B00571528405F260054304A /* MapInfoVIew.swift */,
 				4B005723284073440054304A /* LandmarkList.swift */,
+				4B00574D28422D230054304A /* MessageSFInfo.swift */,
+				4B0057502842747A0054304A /* CavansPage.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -368,8 +405,12 @@
 				4B00570C283F51860054304A /* MePageHeaderV.swift in Sources */,
 				4B00571D2840669B0054304A /* Landmark.swift in Sources */,
 				4BD7AD70283F25D200EE63FE /* MeVC.swift in Sources */,
+				4B005754284309A50054304A /* Tabbar.swift in Sources */,
 				4BD7AD6D283F25A900EE63FE /* HomeVC.swift in Sources */,
+				4B00574E28422D230054304A /* MessageSFInfo.swift in Sources */,
+				4B0057442840BA070054304A /* UserInfo.swift in Sources */,
 				4B00571428405DA70054304A /* MapView.swift in Sources */,
+				4B00574C28421C520054304A /* modifier.swift in Sources */,
 				4B0057422840B2070054304A /* HikeView.swift in Sources */,
 				4B00572228406D7F0054304A /* LandmarkRow.swift in Sources */,
 				4B00570E283F57510054304A /* PersonalMessageVC.swift in Sources */,
@@ -377,11 +418,16 @@
 				4B005712283F85AF0054304A /* ChangeNickNameVC.swift in Sources */,
 				4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */,
 				4B005707283F2FA80054304A /* MeCell.swift in Sources */,
+				4B00574A2840D4D10054304A /* ChangePasswordPage.swift in Sources */,
 				4B00572F2840A6900054304A /* BadgeBackground.swift in Sources */,
 				4B005710283F83A70054304A /* MeIconVC.swift in Sources */,
 				4BD7AD76283F25FD00EE63FE /* MessageVC.swift in Sources */,
 				4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */,
+				4B0057512842747A0054304A /* CavansPage.swift in Sources */,
 				4B0057352840ADC70054304A /* Badge.swift in Sources */,
+				4B0057462840BCE30054304A /* UserDefault-Extern.swift in Sources */,
+				4B0057482840CA5F0054304A /* SexPage.swift in Sources */,
+				4B005756284313260054304A /* Tab.swift in Sources */,
 				4B00573F2840B2070054304A /* GraphCapsule.swift in Sources */,
 				4B00571828405FB40054304A /* CircleImage.swift in Sources */,
 				4B0057402840B2070054304A /* HikeGraph.swift in Sources */,
@@ -518,12 +564,13 @@
 				DEVELOPMENT_TEAM = C5P3692DC5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ZXSwiftUI-Product-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,12 +595,13 @@
 				DEVELOPMENT_TEAM = C5P3692DC5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ZXSwiftUI-Product-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

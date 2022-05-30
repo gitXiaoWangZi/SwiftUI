@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MePageHeaderV: View {
     
-    var icon : String = ""
-    var name : String = ""
+    var icon : String = "hiddenlake"
+    var name : String = "ds"
     var body: some View {
         VStack{
             Spacer(minLength: 60)
@@ -19,7 +19,9 @@ struct MePageHeaderV: View {
                     .resizable()
                     .frame(width: 60, height: 60, alignment: .leading)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-                    .cornerRadius(30)
+                    .mask({
+                        Circle()
+                    })
                 Text(name)
                     .font(.title)
                     .padding(.leading)

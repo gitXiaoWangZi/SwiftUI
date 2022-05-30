@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PersonalMessageVC: View {
     //    var
+    @EnvironmentObject var userInfo : UserInfo
     var body: some View {
         List(0..<2) { idx in
             Section{
@@ -20,22 +21,30 @@ struct PersonalMessageVC: View {
                             ).listRowBackground(Color.white)
                         }
                         if index == 1 {
-                            PersonalCell(title: "昵称", content: "刘圣洁", isShow: true).frame(height:50).background(
-                                NavigationLink(destination: ChangeNickNameVC()) {}.opacity(0)
+                            PersonalCell(title: "昵称", content: userInfo.name, isShow: true).frame(height:50).background(
+                                NavigationLink("",destination:{ ChangeNickNameVC().environmentObject(userInfo) }).opacity(0)
                             ).listRowBackground(Color.white)
                         }
                         if index == 2 {
                             PersonalCell(title: "账号", content: "15538609637", isShow: false).frame(height:50)
                         }
                         if index == 3 {
-                            PersonalCell(title: "性别", content: "", isShow: true).frame(height:50)
+                            PersonalCell(title: "性别", content: userInfo.sex, isShow: true).frame(height:50).background(
+                                NavigationLink("",destination: {
+                                    SexPage(isSelectMan: true).environmentObject(userInfo)
+                                }).opacity(0)
+                            ).listRowBackground(Color.white)
                         }
                     }
                 }
             }
             //            Section{
             if idx == 1 {
-                PersonalCell(title: "修改密码", content: "", isShow: true).frame(height:50)
+                PersonalCell(title: "修改密码", content: "", isShow: true).frame(height:50).background(
+                    NavigationLink("",destination: {
+                        ChangePasswordPage()
+                    }).opacity(0)
+                ).listRowBackground(Color.white)
             }
             //            }
             

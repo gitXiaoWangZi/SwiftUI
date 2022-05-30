@@ -14,36 +14,38 @@ struct MeCell: View {
     var isShow : Bool
     
     var body: some View {
-        ZStack{
-            Color.white.edgesIgnoringSafeArea(.all)
-            HStack {
-                Image(icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30, height: 30)
-                Text(content)
-                    .font(.body).padding(.leading)
-                if isShow {
-                    Text("撤回")
-                        .font(.system(size: 15))
-                        .foregroundColor(.white)
-                        .frame(width: 40, height: 10)
-                        .padding(5)
-                        .background(Color.red)
-                        .cornerRadius(15)
-                }
-                Spacer()
-                Image("right_arrow")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 8, height: 14)
+        HStack(alignment: .center) {
+            Image(icon)
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 20, height: 20)
+            Text(content).font(.body)
+                .multilineTextAlignment(.leading).lineLimit(1).padding(.leading)
+            if isShow {
+                Text("撤回")
+                    .fontWeight(.light)
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    .textTyle()
             }
+            Spacer()
         }
     }
 }
 
 struct MeCell_Previews: PreviewProvider {
     static var previews: some View {
-        MeCell(icon: "mine_feedback", content: "意见反馈", isShow: true)
+        Group {
+            MeCell(icon: "mine_feedback", content: "意见反馈", isShow: true)
+                .preferredColorScheme(/*@START_MENU_TOKEN@*/.light/*@END_MENU_TOKEN@*/)
+                .previewLayout(.sizeThatFits)
+                .previewDevice("iPhone 13 mini")
+                .background()
+            MeCell(icon: "mine_feedback", content: "意见反馈", isShow: true)
+                .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+                .previewLayout(.sizeThatFits)
+                .previewDevice("iPhone 13 mini")
+                .background()
+        }
     }
 }

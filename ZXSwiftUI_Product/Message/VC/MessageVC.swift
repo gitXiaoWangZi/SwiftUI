@@ -10,24 +10,30 @@ import SwiftUI
 struct MessageVC: View {
     @StateObject private var modeldata = ModelData()
     var body: some View {
-        Form {
-            NavigationLink {
-                LandmarkList().environmentObject(modeldata)
-            } label: {
-                Text("地标")
-            }
-            NavigationLink {
-                Badge()
-            } label: {
-                Text("绘图")
-            }
-            NavigationLink {
-                HikeView(hike: modeldata.hikes[1])
-            } label: {
-                Text("动画")
-            }
-            
-        }.navigationBarTitleDisplayMode(.large)
+        NavigationView {
+            Form {
+                NavigationLink {
+                    LandmarkList().environmentObject(modeldata)
+                } label: {
+                    Text("地标")
+                }
+                NavigationLink {
+                    Badge()
+                } label: {
+                    Text("绘图")
+                }
+                NavigationLink {
+                    HikeView(hike: modeldata.hikes[1])
+                } label: {
+                    Text("动画")
+                }
+                NavigationLink {
+                    MessageSFInfo(isDelete: false)
+                } label: {
+                    Text("SF")
+                }
+            }.navigationTitle("功能").navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

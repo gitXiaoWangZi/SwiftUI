@@ -15,8 +15,11 @@ struct SexPage: View {
     var body: some View {
         
         Form{
-            ZStack{
-                Color.white.edgesIgnoringSafeArea(.all)
+            
+            Button {
+                isShow = true
+                isSelectMan = true
+            } label: {
                 HStack{
                     Text("男")
                     Spacer()
@@ -26,12 +29,12 @@ struct SexPage: View {
                             .foregroundColor(.yellow)
                     }
                 }
-            }.onTapGesture {
-                isShow = true
-                isSelectMan = true
             }
-            ZStack{
-                Color.white.edgesIgnoringSafeArea(.all)
+            
+            Button {
+                isShow = true
+                isSelectMan = false
+            } label: {
                 HStack{
                     Text("女")
                     Spacer()
@@ -41,11 +44,8 @@ struct SexPage: View {
                             .foregroundColor(.yellow)
                     }
                 }
-            }.onTapGesture {
-                isShow = true
-                isSelectMan = false
             }
-        }.navigationTitle("修改性别").toolbar {
+        }.accentColor(.primary).navigationTitle("修改性别").toolbar {
             Button {
                 userInfo.sex = isSelectMan ? "男" : "女"
                 UserDefaults.standard.set(userInfo.sex, forKey: "sex")

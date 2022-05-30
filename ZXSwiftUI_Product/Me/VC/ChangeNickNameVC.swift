@@ -12,15 +12,10 @@ struct ChangeNickNameVC: View {
     @EnvironmentObject var userInfo : UserInfo
     @State var nickNake : String = ""
     var body: some View {
-        ZStack {
-            Color.red.edgesIgnoringSafeArea(.all)
-            
-            VStack{
-                TextField("修改昵称", text: $nickNake).padding().background(Color.white)
-                Text("\(nickNake)")
-                Spacer()
-            }
-            
+        VStack{
+            TextField("修改昵称", text: $nickNake).padding()
+            Text("\(nickNake)")
+            Spacer()
         }.navigationTitle("修改姓名").toolbar {
             Button {
                 userInfo.name = nickNake
@@ -42,6 +37,10 @@ struct ChangeNickNameVC: View {
 
 struct ChangeNickNameVC_Previews: PreviewProvider {
     static var previews: some View {
-        ChangeNickNameVC()
+        Group {
+            ChangeNickNameVC()
+            ChangeNickNameVC()
+                .preferredColorScheme(.dark)
+        }
     }
 }

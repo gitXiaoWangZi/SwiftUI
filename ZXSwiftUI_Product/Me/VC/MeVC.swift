@@ -18,7 +18,7 @@ struct MeVC: View {
                 NavigationLink {
                     PersonalMessageVC().environmentObject(userInfo)
                 } label: {
-                    MePageHeaderV(icon: "mine_header", name: "刘圣洁")
+                    MePageHeaderV(icon: "mine_header", name: userInfo.name)
                 }
                 
                 ForEach(homeList){ list in

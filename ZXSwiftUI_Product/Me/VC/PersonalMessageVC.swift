@@ -12,41 +12,42 @@ struct PersonalMessageVC: View {
     @EnvironmentObject var userInfo : UserInfo
     var body: some View {
         List(0..<2) { idx in
-            Section{
-                if idx == 0 {
-                    ForEach(0..<4){ index in
-                        if index == 0 {
-                            PersonalHeaderView().frame(height:80).background(
-                                NavigationLink(destination: MeIconVC(headerIcon: "mine_header")) {}.opacity(0)
-                            ).listRowBackground(Color.white)
+            if idx == 0 {
+                ForEach(0..<4){ index in
+                    if index == 0 {
+                        NavigationLink {
+                            MeIconVC(headerIcon: "mine_header")
+                        } label: {
+                            PersonalHeaderView().frame(height:80)
                         }
-                        if index == 1 {
-                            PersonalCell(title: "昵称", content: userInfo.name, isShow: true).frame(height:50).background(
-                                NavigationLink("",destination:{ ChangeNickNameVC().environmentObject(userInfo) }).opacity(0)
-                            ).listRowBackground(Color.white)
+                    }
+                    if index == 1 {
+                        NavigationLink {
+                            ChangeNickNameVC().environmentObject(userInfo)
+                        } label: {
+                            PersonalCell(title: "昵称", content: userInfo.name).frame(height:50)
                         }
-                        if index == 2 {
-                            PersonalCell(title: "账号", content: "15538609637", isShow: false).frame(height:50)
-                        }
-                        if index == 3 {
-                            PersonalCell(title: "性别", content: userInfo.sex, isShow: true).frame(height:50).background(
-                                NavigationLink("",destination: {
-                                    SexPage(isSelectMan: true).environmentObject(userInfo)
-                                }).opacity(0)
-                            ).listRowBackground(Color.white)
+                    }
+                    if index == 2 {
+                        PersonalCell(title: "账号", content: "15538609637").frame(height:50)
+                    }
+                    if index == 3 {
+                        NavigationLink {
+                            SexPage(isSelectMan: true).environmentObject(userInfo)
+                        } label: {
+                            PersonalCell(title: "性别", content: userInfo.sex).frame(height:50)
                         }
                     }
                 }
             }
-            //            Section{
+            
             if idx == 1 {
-                PersonalCell(title: "修改密码", content: "", isShow: true).frame(height:50).background(
-                    NavigationLink("",destination: {
-                        ChangePasswordPage()
-                    }).opacity(0)
-                ).listRowBackground(Color.white)
+                NavigationLink {
+                    ChangePasswordPage()
+                } label: {
+                    PersonalCell(title: "修改密码", content: "").frame(height:50)
+                }
             }
-            //            }
             
         }.navigationTitle(Text("个人信息")).navigationBarTitleDisplayMode(.inline)//.listStyle(.grouped)
     }
@@ -60,23 +61,15 @@ struct PersonalMessageVC_Previews: PreviewProvider {
 
 struct PersonalHeaderView : View {
     var body: some View {
-        ZStack {
-            Color.white.edgesIgnoringSafeArea(.all)
-            
-            HStack {
-                Text("头像").font(.body).padding(.leading)
-                Spacer()
-                Image("mine_header")
-                    .resizable()
-                    .frame(width: 60, height: 60)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(.white,lineWidth: 1))
-                    .shadow(radius: 10)
-                Image("right_arrow")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 8, height: 14)
-            }
+        HStack {
+            Text("头像").font(.body).padding(.leading)
+            Spacer()
+            Image("mine_header")
+                .resizable()
+                .frame(width: 60, height: 60)
+                .clipShape(Circle())
+                .overlay(Circle().stroke(.white,lineWidth: 1))
+                .shadow(radius: 10)
         }
     }
 }
@@ -86,29 +79,14 @@ struct PersonalCell : View {
     
     var title : String
     var content : String
-    var isShow : Bool
     var body: some View {
-        ZStack {
-            Color.white.edgesIgnoringSafeArea(.all)
+        HStack {
+            Text(title).padding(.leading)
             
-            HStack {
-                Text(title).padding(.leading)
-                
-                Spacer()
-                
-                Text(content).foregroundColor(.gray)
-                
-                if isShow {
-                    Image("right_arrow")
-                }
-                
-            }
+            Spacer()
+            
+            Text(content).foregroundColor(.gray)
+            
         }
     }
 }
-
-//struct PersonalCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PersonalCell()
-//    }
-//}

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChangePasswordPage: View {
     
-    var phoneNum : String = "17537722382"
+    @EnvironmentObject var userInfo : UserInfo
     @State var oldPW : String = ""
     @State var newPW : String = ""
     @State var confirmPW : String = ""
@@ -18,7 +18,7 @@ struct ChangePasswordPage: View {
             VStack(alignment: .leading) {
                 HStack{
                     Text("手机号").foregroundColor(.gray)
-                    Text(phoneNum).foregroundColor(.gray)
+                    Text(userInfo.account).foregroundColor(.gray)
                 }.frame(height:50)
                 HStack{
                     Text("旧密码")

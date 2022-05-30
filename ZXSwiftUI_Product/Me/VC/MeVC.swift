@@ -32,6 +32,15 @@ struct MeVC: View {
                         }
                     }
                 }
+                
+                Button {
+                    UserDefaults.standard.removeObject(forKey: "account")
+                    isLogin = false
+                } label: {
+                    Text("退出登录").frame(maxWidth: .infinity)
+                }.accentColor(.primary)
+
+                
             }
             .ignoresSafeArea(edges: .top)
             .navigationBarHidden(true)

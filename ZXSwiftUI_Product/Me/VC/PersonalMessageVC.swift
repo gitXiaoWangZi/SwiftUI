@@ -29,7 +29,7 @@ struct PersonalMessageVC: View {
                         }
                     }
                     if index == 2 {
-                        PersonalCell(title: "账号", content: "15538609637")
+                        PersonalCell(title: "账号", content: userInfo.account)
                     }
                     if index == 3 {
                         NavigationLink {
@@ -43,7 +43,7 @@ struct PersonalMessageVC: View {
             
             if idx == 1 {
                 NavigationLink {
-                    ChangePasswordPage()
+                    ChangePasswordPage().environmentObject(userInfo)
                 } label: {
                     PersonalCell(title: "修改密码", content: "")
                 }

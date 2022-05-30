@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct ZXSwiftUI_ProductApp: App {
+    
+    
+    @State var isLogina : Bool = isLogin
     var body: some Scene {
         WindowGroup {
-            Tabbar()
+            if isLogina {
+                Tabbar()
+            }else{
+                LoginPage(isLogin: $isLogina)
+            }
         }
     }
 }

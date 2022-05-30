@@ -27,7 +27,7 @@ struct ChangeNickNameVC: View {
                     .frame(width: 65, height: 30)
                     .background(Color.purple)
                     .cornerRadius(4)
-            }
+            }.disabled(nickNake.count == 0)
 
         }
     }

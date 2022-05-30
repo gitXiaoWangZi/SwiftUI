@@ -25,17 +25,17 @@ struct PersonalMessageVC: View {
                         NavigationLink {
                             ChangeNickNameVC().environmentObject(userInfo)
                         } label: {
-                            PersonalCell(title: "昵称", content: userInfo.name).frame(height:50)
+                            PersonalCell(title: "昵称", content: userInfo.name)
                         }
                     }
                     if index == 2 {
-                        PersonalCell(title: "账号", content: "15538609637").frame(height:50)
+                        PersonalCell(title: "账号", content: "15538609637")
                     }
                     if index == 3 {
                         NavigationLink {
                             SexPage(isSelectMan: true).environmentObject(userInfo)
                         } label: {
-                            PersonalCell(title: "性别", content: userInfo.sex).frame(height:50)
+                            PersonalCell(title: "性别", content: userInfo.sex)
                         }
                     }
                 }
@@ -45,7 +45,7 @@ struct PersonalMessageVC: View {
                 NavigationLink {
                     ChangePasswordPage()
                 } label: {
-                    PersonalCell(title: "修改密码", content: "").frame(height:50)
+                    PersonalCell(title: "修改密码", content: "")
                 }
             }
             

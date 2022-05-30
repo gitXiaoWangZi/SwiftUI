@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MePageHeaderV: View {
     
-    var icon : String = "hiddenlake"
-    var name : String = "ds"
+    var icon : String
+    var name : String
     var body: some View {
         VStack{
             Spacer(minLength: 60)
@@ -23,6 +23,7 @@ struct MePageHeaderV: View {
                         Circle()
                     })
                 Text(name)
+                    .foregroundColor(.primary)
                     .font(.title)
                     .padding(.leading)
                 Spacer()
@@ -36,6 +37,6 @@ struct MePageHeaderV: View {
 
 struct MePageHeaderV_Previews: PreviewProvider {
     static var previews: some View {
-        MePageHeaderV()
+        MePageHeaderV(icon: "dd", name: "ss")
     }
 }

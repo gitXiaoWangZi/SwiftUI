@@ -52,12 +52,10 @@ struct SexPage: View {
             } label: {
                 Text("保存")
                     .foregroundStyle(.white)
-                    .frame(width: 70, height: 35)
+                    .font(.system(size: 13))
+                    .frame(width: 65, height: 30)
                     .background(Color.purple)
-                    .font(.body)
-                    .mask {
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    }
+                    .cornerRadius(4)
             }
 
         }

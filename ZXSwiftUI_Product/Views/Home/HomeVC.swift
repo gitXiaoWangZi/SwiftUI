@@ -27,80 +27,76 @@ struct HomeVC: View {
                 highQuality
                 //精品课程
                 course
-                Spacer()
+                //精选话题
+                topic
             }
-        }//.frame(maxWidth:.infinity,maxHeight: .infinity)
+        }
     }
     
     ///MARK - 头部轮播图
     var headerScroll : some View {
-        
-        VStack{
-            
-            TabView(selection: $currentPage) {
-                ForEach(imageArr,id: \.self) { index in
-                    Image(index)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 151, alignment: .center)
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .circular))
-                        .tag(index)
-                }
+        TabView {
+            ForEach(0..<2,id: \.self) { idx in
+                Image("banner")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width - 40, height: 135)
+                    .cornerRadius(20)
             }
-            .frame(height:151)
-            .tabViewStyle(PageTabViewStyle())
         }
-        
-            
+        .tabViewStyle(PageTabViewStyle())
+        .frame(maxWidth: .infinity,maxHeight: 135)
+        .frame(height: 135)
     }
     
     var studyTask : some View {
-        VStack {
-            HStack {
+        VStack(spacing: 0) {
+            HStack(alignment: .center){
                 Text("本周学习任务")
                     .font(.body.weight(.medium))
                     .foregroundColor(.primary)
+                    .padding(.leading,10)
                 Spacer()
                 
                 NavigationLink {
                     ChangeNickNameVC()
                 } label: {
                     HStack(spacing: 2) {
-                        Text("更多").foregroundColor(.primary)
+                        Text("更多")
+                            .foregroundColor(.primary)
+                            .font(.subheadline)
                         Image(systemName: "chevron.right")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 20, height: 15, alignment: .center)
                             .foregroundColor(.secondary)
                     }
+                    .padding(.trailing,10)
+                    .padding(.vertical,10)
                 }
             }
-            .padding(.horizontal,20)
-            .padding(.top,10)
             
             TabView {
                 ForEach(0..<2,id: \.self) { idx in
                     VStack{
                         ForEach(0..<3,id: \.self) { index in
-                            HStack(spacing: 10){
+                            HStack(alignment:.center,spacing: 10){
                                 Image("topic_reply")
                                     .resizable()
-                                    .scaledToFit()
-                                VStack(alignment: .leading){
-                                    Text("affjeijfeijfiejf的近似的计算几点睡觉滴大祭司iejfiejfiejfiej\(index)")
-                                        .multilineTextAlignment(.leading)
-                                        .frame(height: 25, alignment: .leading)
+                                    .scaledToFill()
+                                    .frame(width: 44, height: 44)
+                                VStack(alignment: .leading,spacing: 0){
+                                    Text("的近似的计算几点睡觉滴大祭iej")
+                                        .frame(height: 25)
                                     Text("近似的计算\(index)")
                                         .foregroundColor(.secondary)
                                         .font(.footnote)
-                                        .multilineTextAlignment(.leading)
-                                        .frame(height: 25, alignment: .leading)
+                                        .frame(height: 25)
                                 }
                                 Spacer()
                             }
                             .padding(.horizontal,20)
-                            .frame(maxWidth: .infinity,maxHeight: .infinity)
-                                
+                            .frame(height:55)
                         }
                     }
                 }
@@ -112,51 +108,50 @@ struct HomeVC: View {
     }
     
     var thinking : some View {
-        VStack {
-            HStack {
+        VStack(spacing: 0) {
+            HStack(alignment: .center){
                 Text("冥想")
                     .font(.body.weight(.medium))
                     .foregroundColor(.primary)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0..<7) { index in
-                            Button {
-                                
-                            } label: {
-                                Text("8分钟速睡")
-                                    .font(.caption)
-                                    .foregroundColor(.primary)
-                                    .frame(width:90,height: 20)
-                                    .background(.secondary)
-                                    .cornerRadius(15)
-                            }
-                        }
-                    }
-                }.frame(height: 30)
+                    .padding(.leading,10)
                 Spacer()
-            }
-            .padding(.leading,20)
-            .padding(.top,10)
-            
-            ForEach(0..<3,id: \.self) { index in
-                HStack(spacing: 10){
-                    Image("learn_home_muse_play")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25, height: 25, alignment: .center)
-                    
-                    Text("熬夜速睡*8分钟男生熬夜速睡*8分钟男生熬夜速睡*8分钟男生")
-                        .multilineTextAlignment(.leading)
-                        .frame(height: 25, alignment: .leading)
-                    
-                    Spacer()
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack(spacing: 10) {
+                        ForEach(0 ..< 5) { item in
+                            ZStack(alignment: .center) {
+                                Color.yellow.cornerRadius(11)
+                                
+                                Text("#第一案例降低#")
+                                    .font(.footnote)
+                                    .foregroundColor(.primary)
+                                    .padding(.horizontal,20)
+                            }.frame(height: 23)
+                        }
+                    }.padding(.leading,10)
                 }
-                .padding(.horizontal,20)
-                .frame(maxWidth: .infinity,maxHeight: .infinity)
-                    
-            }
+            }.padding(.bottom,10)
             
+            VStack(spacing:0) {
+                
+                ForEach(0 ..< 3) { item in
+                    HStack{
+                        Image("learn_home_muse_play")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 20)
+                            .padding(10)
+                        
+                        Text("熬夜速睡*8分钟男熬夜速睡*8分钟男生")
+                            .foregroundColor(.primary)
+                            .font(.body)
+                            .lineLimit(1)
+                            .padding(.trailing,10)
+                        
+                        Spacer()
+                    }
+                }
+            }
         }
     }
     
@@ -192,10 +187,10 @@ struct HomeVC: View {
                         ZStack {
                             Image("")
                                 .resizable()
-                                .frame(width: UIScreen.main.bounds.width - 20, height: (UIScreen.main.bounds.width - 20) * 0.4, alignment: .center)
+                                .frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
                                 .background(.yellow)
                             
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .leading,spacing: 5) {
                                 HStack(spacing: 0) {
                                     Image("learn_liveing")
                                         .resizable()
@@ -209,7 +204,9 @@ struct HomeVC: View {
                                 .padding(5)
                                 .background(.black.opacity(0.5))
                                 Spacer()
-                                Text("竹山夹袄地势低his").foregroundColor(.white).padding(.leading,10)
+                                Text("竹山夹袄地势低his")
+                                    .foregroundColor(.white)
+                                    .padding(.leading,10)
                                 HStack {
                                     Text("2022-10-03").font(.footnote).foregroundColor(.white).padding(.leading,10)
                                     Spacer()
@@ -221,11 +218,11 @@ struct HomeVC: View {
                                         .font(.footnote)
                                         .foregroundColor(.white)
                                         .padding(.trailing,10)
-                                }.padding(.bottom,10)
+                                }.padding(.bottom,5)
                                 
                             }
                             .frame(maxWidth: .infinity,maxHeight: .infinity)
-                        }.frame(width: UIScreen.main.bounds.width - 20, height: (UIScreen.main.bounds.width - 20) * 0.4, alignment: .center)
+                        }.frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
                             .padding(.horizontal,10)
                     }
                 }
@@ -277,14 +274,14 @@ struct HomeVC: View {
                                     .frame(maxHeight: .infinity)
                                     .frame(width:20,height: 20)
                                     .padding(5)
-                            }.frame(height: 90)
+                            }.frame(height: 105)
                             
                             Text("2021.1.12第一案例降低")
                                 .font(.footnote)
                                 .foregroundColor(.primary)
                                 .padding(3)
                                 .lineLimit(2)
-                        }.frame(width: 90)
+                        }.frame(width: 105)
                     }
                 }.padding(.leading,10)
             }
@@ -322,7 +319,7 @@ struct HomeVC: View {
                     ForEach(0 ..< 5) { item in
                         ZStack {
                             Color.yellow
-                                .frame(width: UIScreen.main.bounds.width - 20, height: (UIScreen.main.bounds.width - 20) * 0.3, alignment: .center)
+                                .frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
                                 .cornerRadius(10)
                             
                             HStack(alignment: .top) {
@@ -356,10 +353,53 @@ struct HomeVC: View {
                                 
                                 Spacer()
                             }
-                        }.frame(width: UIScreen.main.bounds.width - 20, height: (UIScreen.main.bounds.width - 20) * 0.3, alignment: .center)
+                        }.frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
                             .padding(.horizontal,10)
                     }
                 }
+            }
+        }
+    }
+    
+    var topic : some View {
+        VStack(spacing: 0) {
+            HStack(alignment: .center){
+                Text("精选话题")
+                    .font(.body.weight(.medium))
+                    .foregroundColor(.primary)
+                    .padding(.leading,10)
+                Spacer()
+                
+                NavigationLink {
+                    ChangeNickNameVC()
+                } label: {
+                    HStack(spacing: 2) {
+                        Text("更多")
+                            .foregroundColor(.primary)
+                            .font(.subheadline)
+                        Image(systemName: "chevron.right")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 20, height: 15, alignment: .center)
+                            .foregroundColor(.secondary)
+                    }
+                    .padding(.trailing,10)
+                    .padding(.vertical,10)
+                }
+            }
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack(spacing: 10) {
+                    ForEach(0 ..< 5) { item in
+                        ZStack(alignment: .center) {
+                            Color.yellow.cornerRadius(17)
+                            
+                            Text("#2021.1.12第一案例降低#")
+                                .font(.footnote)
+                                .foregroundColor(.primary)
+                                .padding(.horizontal,20)
+                        }.frame(height: 35)
+                    }
+                }.padding(.leading,10)
             }
         }
     }

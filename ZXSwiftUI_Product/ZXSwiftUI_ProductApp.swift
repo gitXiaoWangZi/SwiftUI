@@ -13,7 +13,7 @@ struct ZXSwiftUI_ProductApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeVC()
         }
     }
 }

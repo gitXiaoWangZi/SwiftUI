@@ -43,6 +43,7 @@
 		4B005754284309A50054304A /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005753284309A50054304A /* Tabbar.swift */; };
 		4B005756284313260054304A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005755284313260054304A /* Tab.swift */; };
 		4B00575A284490C30054304A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005759284490C30054304A /* LoginPage.swift */; };
+		4B0057682845C49A0054304A /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057672845C49A0054304A /* TempView.swift */; };
 		4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */; };
 		4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5B283F245D00EE63FE /* ContentView.swift */; };
 		4BD7AD5E283F245E00EE63FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5D283F245E00EE63FE /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		4B005753284309A50054304A /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		4B005755284313260054304A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		4B005759284490C30054304A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		4B0057672845C49A0054304A /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		4BD7AD56283F245D00EE63FE /* ZXSwiftUI_Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXSwiftUI_Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXSwiftUI_ProductApp.swift; sourceTree = "<group>"; };
 		4BD7AD5B283F245D00EE63FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD7AD6C283F25A900EE63FE /* HomeVC.swift */,
+				4B0057672845C49A0054304A /* TempView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				4B00570E283F57510054304A /* PersonalMessageVC.swift in Sources */,
 				4BD7AD73283F25E900EE63FE /* AddressVC.swift in Sources */,
 				4B005712283F85AF0054304A /* ChangeNickNameVC.swift in Sources */,
+				4B0057682845C49A0054304A /* TempView.swift in Sources */,
 				4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */,
 				4B005707283F2FA80054304A /* MeCell.swift in Sources */,
 				4B00574A2840D4D10054304A /* ChangePasswordPage.swift in Sources */,

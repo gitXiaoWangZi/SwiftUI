@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "精品课程_图标_播放中.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "精品课程_图标_播放中@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "精品课程_图标_播放中@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

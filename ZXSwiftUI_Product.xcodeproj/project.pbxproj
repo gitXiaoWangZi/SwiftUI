@@ -86,7 +86,6 @@
 		4B0057492840D4D10054304A /* ChangePasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPage.swift; sourceTree = "<group>"; };
 		4B00574B28421C520054304A /* modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modifier.swift; sourceTree = "<group>"; };
 		4B00574D28422D230054304A /* MessageSFInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSFInfo.swift; sourceTree = "<group>"; };
-		4B00574F2842605C0054304A /* ZXSwiftUI-Product-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ZXSwiftUI-Product-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4B0057502842747A0054304A /* CavansPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CavansPage.swift; sourceTree = "<group>"; };
 		4B005753284309A50054304A /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		4B005755284313260054304A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
@@ -113,28 +112,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B005708283F3E6F0054304A /* M */ = {
-			isa = PBXGroup;
-			children = (
-				4B005709283F3EA00054304A /* Me_HomeList.swift */,
-				4B0057432840BA070054304A /* UserInfo.swift */,
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		4B005719284066570054304A /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		4B00571E28406AA80054304A /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				4B00571F28406AC30054304A /* ModelData.swift */,
 				4B0057452840BCE30054304A /* UserDefault-Extern.swift */,
-				4B00574B28421C520054304A /* modifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -185,29 +167,105 @@
 			path = Hikes;
 			sourceTree = "<group>";
 		};
-		4B0057522843099A0054304A /* Main */ = {
+		4B00575B2844FC3C0054304A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				4BD7AD5B283F245D00EE63FE /* ContentView.swift */,
 				4B005753284309A50054304A /* Tabbar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4B00575C2844FC930054304A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4B0057652844FF4A0054304A /* Login */,
+				4B0057612844FDF80054304A /* Me */,
+				4B0057602844FDEF0054304A /* Address */,
+				4B00575F2844FDE40054304A /* Message */,
+				4B00575E2844FDDC0054304A /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B00575D2844FCF40054304A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B0057642844FEFD0054304A /* Me */,
 				4B005755284313260054304A /* Tab.swift */,
 			);
-			path = Main;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		4B0057572844909B0054304A /* Login */ = {
+		4B00575E2844FDDC0054304A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4B005758284490A80054304A /* V */,
+				4BD7AD6C283F25A900EE63FE /* HomeVC.swift */,
 			);
-			path = Login;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		4B005758284490A80054304A /* V */ = {
+		4B00575F2844FDE40054304A /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD75283F25FD00EE63FE /* MessageVC.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		4B0057602844FDEF0054304A /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD72283F25E900EE63FE /* AddressVC.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		4B0057612844FDF80054304A /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				4BD7AD6F283F25D200EE63FE /* MeVC.swift */,
+				4B005706283F2FA80054304A /* MeCell.swift */,
+				4B00570B283F51860054304A /* MePageHeaderV.swift */,
+				4B00570D283F57510054304A /* PersonalMessageVC.swift */,
+				4B00570F283F83A70054304A /* MeIconVC.swift */,
+				4B005711283F85AF0054304A /* ChangeNickNameVC.swift */,
+				4B0057472840CA5F0054304A /* SexPage.swift */,
+				4B0057492840D4D10054304A /* ChangePasswordPage.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		4B0057622844FE7E0054304A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4B0057632844FEB20054304A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				4B00574B28421C520054304A /* modifier.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		4B0057642844FEFD0054304A /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				4B0057432840BA070054304A /* UserInfo.swift */,
+				4B005709283F3EA00054304A /* Me_HomeList.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		4B0057652844FF4A0054304A /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				4B005759284490C30054304A /* LoginPage.swift */,
 			);
-			path = V;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		4BD7AD4D283F245D00EE63FE = {
@@ -229,16 +287,14 @@
 		4BD7AD58283F245D00EE63FE /* ZXSwiftUI_Product */ = {
 			isa = PBXGroup;
 			children = (
-				4B00574F2842605C0054304A /* ZXSwiftUI-Product-Info.plist */,
-				4B0057572844909B0054304A /* Login */,
-				4B0057522843099A0054304A /* Main */,
+				4B0057632844FEB20054304A /* Types */,
+				4B0057622844FE7E0054304A /* Components */,
+				4B00575B2844FC3C0054304A /* Navigation */,
+				4B00575C2844FC930054304A /* Views */,
+				4B00575D2844FCF40054304A /* Model */,
 				4B00571E28406AA80054304A /* Common */,
-				4BD7AD67283F247700EE63FE /* Home */,
-				4BD7AD6A283F249600EE63FE /* Message */,
-				4BD7AD69283F248800EE63FE /* Address */,
-				4BD7AD68283F247F00EE63FE /* Me */,
+				4BD7AD6A283F249600EE63FE /* Canvas */,
 				4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */,
-				4BD7AD5B283F245D00EE63FE /* ContentView.swift */,
 				4BD7AD5D283F245E00EE63FE /* Assets.xcassets */,
 				4BD7AD5F283F245E00EE63FE /* Preview Content */,
 			);
@@ -253,34 +309,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4BD7AD67283F247700EE63FE /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				4BD7AD6B283F259300EE63FE /* VC */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		4BD7AD68283F247F00EE63FE /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				4B005719284066570054304A /* Data */,
-				4B005708283F3E6F0054304A /* M */,
-				4BD7AD77283F2E7E00EE63FE /* V */,
-				4BD7AD6E283F25B300EE63FE /* VC */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		4BD7AD69283F248800EE63FE /* Address */ = {
-			isa = PBXGroup;
-			children = (
-				4BD7AD71283F25D700EE63FE /* VC */,
-			);
-			path = Address;
-			sourceTree = "<group>";
-		};
-		4BD7AD6A283F249600EE63FE /* Message */ = {
+		4BD7AD6A283F249600EE63FE /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
 				4B0057292840A3770054304A /* M */,
@@ -288,57 +317,18 @@
 				4B0057272840A3490054304A /* V */,
 				4BD7AD74283F25F300EE63FE /* VC */,
 			);
-			path = Message;
-			sourceTree = "<group>";
-		};
-		4BD7AD6B283F259300EE63FE /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				4BD7AD6C283F25A900EE63FE /* HomeVC.swift */,
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		4BD7AD6E283F25B300EE63FE /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				4BD7AD6F283F25D200EE63FE /* MeVC.swift */,
-				4B00570D283F57510054304A /* PersonalMessageVC.swift */,
-				4B00570F283F83A70054304A /* MeIconVC.swift */,
-				4B005711283F85AF0054304A /* ChangeNickNameVC.swift */,
-				4B0057472840CA5F0054304A /* SexPage.swift */,
-				4B0057492840D4D10054304A /* ChangePasswordPage.swift */,
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		4BD7AD71283F25D700EE63FE /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				4BD7AD72283F25E900EE63FE /* AddressVC.swift */,
-			);
-			path = VC;
+			path = Canvas;
 			sourceTree = "<group>";
 		};
 		4BD7AD74283F25F300EE63FE /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				4BD7AD75283F25FD00EE63FE /* MessageVC.swift */,
 				4B00571528405F260054304A /* MapInfoVIew.swift */,
 				4B005723284073440054304A /* LandmarkList.swift */,
 				4B00574D28422D230054304A /* MessageSFInfo.swift */,
 				4B0057502842747A0054304A /* CavansPage.swift */,
 			);
 			path = VC;
-			sourceTree = "<group>";
-		};
-		4BD7AD77283F2E7E00EE63FE /* V */ = {
-			isa = PBXGroup;
-			children = (
-				4B005706283F2FA80054304A /* MeCell.swift */,
-				4B00570B283F51860054304A /* MePageHeaderV.swift */,
-			);
-			path = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

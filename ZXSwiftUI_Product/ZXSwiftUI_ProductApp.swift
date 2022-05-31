@@ -11,14 +11,9 @@ import SwiftUI
 struct ZXSwiftUI_ProductApp: App {
     
     
-    @State var isLogina : Bool = isLogin
     var body: some Scene {
         WindowGroup {
-            if isLogina {
-                Tabbar()
-            }else{
-                LoginPage(isLogin: $isLogina)
-            }
+            ContentView()
         }
     }
 }

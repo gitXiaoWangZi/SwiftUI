@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import SDWebImageSwiftUI
 
 struct HomeVC: View {
     
@@ -42,7 +43,6 @@ struct HomeVC: View {
                     //精选话题
                     topic
                     
-                    Color.clear.frame(height: 100)
                 }
                 
                 if isShowPlayView {
@@ -51,8 +51,16 @@ struct HomeVC: View {
                 }
                 
             }
-            .navigationTitle("首页")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+            .safeAreaInset(edge: .top) {
+                Color.clear.frame(height: 50)
+            }
+            .overlay(
+                NavigationBar(rightNavIcon: "envelope",leftNavIcon: "mine_header",leftDes: "是hiHi好hi")
+            )
+            .safeAreaInset(edge: .bottom) {
+                Color.clear.frame(height: 55)
+            }
         }
     }
     

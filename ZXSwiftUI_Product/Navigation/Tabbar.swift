@@ -38,7 +38,7 @@ struct Tabbar: View {
         ForEach(tabItems) { item in
             
             Button {
-                withAnimation(.spring(response: 0.2, dampingFraction: 0.7)) {
+                withAnimation(.spring(response: 0, dampingFraction: 0.9)) {
                     currentTab = item.tab
                     currentColor = item.color
                 }

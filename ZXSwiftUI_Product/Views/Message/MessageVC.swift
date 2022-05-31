@@ -32,8 +32,18 @@ struct MessageVC: View {
                 } label: {
                     Text("SF")
                 }
-            }.navigationTitle("功能").navigationBarTitleDisplayMode(.inline)
+            }
+            .safeAreaInset(edge: .top) {
+                Color.clear.frame(height: 50)
+            }
+            .navigationBarHidden(true).overlay(
+                NavigationBar(title: "消息")
+            )
+            .safeAreaInset(edge: .bottom) {
+                Color.clear.frame(height: 55)
+            }
         }
+        
     }
 }
 

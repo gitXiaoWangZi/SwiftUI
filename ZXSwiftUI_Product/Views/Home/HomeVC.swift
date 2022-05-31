@@ -181,59 +181,56 @@ struct HomeVC: View {
                     .padding(.vertical,10)
                 }
             }
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack {
-                    ForEach(0 ..< 5) { item in
-                        ZStack {
-                            Image("")
-                                .resizable()
-                                .frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
-                                .background(.yellow)
-                            
-                            VStack(alignment: .leading,spacing: 5) {
-                                HStack(spacing: 0) {
-                                    Image("learn_liveing")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width:20,height: 20)
-                                    Text("直播中")
-                                        .font(.footnote)
-                                        .foregroundColor(.white)
-                                        .padding(.leading,5)
-                                }
-                                .padding(5)
-                                .background(.black.opacity(0.5))
-                                Spacer()
-                                Text("竹山夹袄地势低his")
+            TabView{
+                ForEach(0 ..< 5,id: \.self) { item in
+                    ZStack {
+                        Image("")
+                            .resizable()
+                            .frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
+                            .background(.yellow)
+                        
+                        VStack(alignment: .leading,spacing: 5) {
+                            HStack(spacing: 0) {
+                                Image("learn_liveing")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width:20,height: 20)
+                                Text("直播中")
+                                    .font(.footnote)
                                     .foregroundColor(.white)
-                                    .padding(.leading,10)
-                                HStack {
-                                    Text("2022-10-03").font(.footnote).foregroundColor(.white).padding(.leading,10)
-                                    Spacer()
-                                    Image("learn_home_people")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 16, height: 16)
-                                    Text("29")
-                                        .font(.footnote)
-                                        .foregroundColor(.white)
-                                        .padding(.trailing,10)
-                                }.padding(.bottom,5)
-                                
+                                    .padding(.leading,5)
                             }
-                            .frame(maxWidth: .infinity,maxHeight: .infinity)
-                        }.frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
-                            .padding(.horizontal,10)
-                    }
+                            .padding(5)
+                            .background(.black.opacity(0.5))
+                            Spacer()
+                            Text("竹山夹袄地势低his")
+                                .foregroundColor(.white)
+                                .padding(.leading,10)
+                            HStack {
+                                Text("2022-10-03").font(.footnote).foregroundColor(.white).padding(.leading,10)
+                                Spacer()
+                                Image("learn_home_people")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 16, height: 16)
+                                Text("29")
+                                    .font(.footnote)
+                                    .foregroundColor(.white)
+                                    .padding(.trailing,10)
+                            }.padding(.bottom,5)
+                        }
+                    }.padding(10)
                 }
-            }
+            }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .frame(maxWidth: .infinity,maxHeight: 140)
+                .frame(height: 140)
         }
     }
     
     var highQuality : some View {
         VStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("精品课程")
+                Text("精品案例会")
                     .font(.body.weight(.medium))
                     .foregroundColor(.primary)
                     .padding(.leading,10)
@@ -314,50 +311,50 @@ struct HomeVC: View {
                     .padding(.vertical,10)
                 }
             }.padding(5)
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack {
-                    ForEach(0 ..< 5) { item in
-                        ZStack {
-                            Color.yellow
-                                .frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
-                                .cornerRadius(10)
-                            
-                            HStack(alignment: .top) {
-                                ZStack(alignment: .bottomTrailing) {
-                                    Image("")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(maxHeight: .infinity)
-                                        .frame(width:100)
-                                        .background(.red)
-                                    
-                                    Text("视频课")
-                                        .font(.footnote)
-                                        .foregroundColor(.white)
-                                        .padding(3)
-                                        .background(.black.opacity(0.5))
-                                        .padding(2)
-                                        .cornerRadius(5)
-                                }
+            TabView{
+                ForEach(0 ..< 5) { item in
+                    ZStack {
+                        Color.yellow
+                            .frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
+                            .cornerRadius(10)
+                        
+                        HStack(alignment: .top) {
+                            ZStack(alignment: .bottomTrailing) {
+                                Image("")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxHeight: .infinity)
+                                    .frame(width:100)
+                                    .background(.red)
                                 
-                                VStack(alignment: .leading) {
-                                    Text("幸福到场")
-                                        .font(.body.weight(.medium))
-                                        .padding(.top,10)
-                                        .padding(5)
-                                    Text("大咖驾到，带你知己教育真相")
-                                        .font(.subheadline.weight(.medium))
-                                        .foregroundColor(.secondary)
-                                        .padding(5)
-                                }
-                                
-                                Spacer()
+                                Text("视频课")
+                                    .font(.footnote)
+                                    .foregroundColor(.white)
+                                    .padding(3)
+                                    .background(.black.opacity(0.5))
+                                    .padding(2)
+                                    .cornerRadius(5)
                             }
-                        }.frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
-                            .padding(.horizontal,10)
-                    }
+                            
+                            VStack(alignment: .leading) {
+                                Text("幸福到场")
+                                    .font(.body.weight(.medium))
+                                    .padding(.top,10)
+                                    .padding(5)
+                                Text("大咖驾到，带你知己教育真相")
+                                    .font(.subheadline.weight(.medium))
+                                    .foregroundColor(.secondary)
+                                    .padding(5)
+                            }
+                            
+                            Spacer()
+                        }
+                    }.padding(.horizontal,10)
                 }
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .frame(maxWidth: .infinity,maxHeight: 105)
+            .frame(height: 105)
         }
     }
     

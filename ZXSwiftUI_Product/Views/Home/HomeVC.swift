@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct HomeVC: View {
     
@@ -14,28 +15,41 @@ struct HomeVC: View {
     @State var total : Int = 0
     
     @State var selectMuseTypeModel : museTypeItem = ModelData().homeListModel.museTypeList[0]
+    @State var selectMuseItem : museItem = ModelData().homeListModel.museTypeList[0].museList[0]
     
     var homeListModel = ModelData().homeListModel
     
+    @State var audioPlayer : AVAudioPlayer = AVAudioPlayer()
+    @State var isPlay : Bool = false
+    @State var isShowPlayView : Bool = false
+    
     var body: some View {
         NavigationView {
-            ScrollView {
-                //轮播图
-                headerScroll
-                //学习任务
-                studyTask
-                //冥想
-                thinking
-                //案例会直播
-                Living
-                //精品案例会
-                highQuality
-                //精品课程
-                course
-                //精选话题
-                topic
+            ZStack(alignment: .bottom){
+                ScrollView {
+                    //轮播图
+                    headerScroll
+                    //学习任务
+                    studyTask
+                    //冥想
+                    thinking
+                    //案例会直播
+                    Living
+                    //精品案例会
+                    highQuality
+                    //精品课程
+                    course
+                    //精选话题
+                    topic
+                    
+                    Color.clear.frame(height: 100)
+                }
                 
-                Color.clear.frame(height: 100)
+                if isShowPlayView {
+                    //音频播放试图
+                    audioView
+                }
+                
             }
             .navigationTitle("首页")
             .navigationBarTitleDisplayMode(.inline)
@@ -149,20 +163,31 @@ struct HomeVC: View {
             VStack(spacing:0) {
                 
                 ForEach(selectMuseTypeModel.museList) { item in
-                    HStack{
-                        Image("learn_home_muse_play")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 20)
-                            .padding(10)
+                    
+                    Button {
+//                        let url = URL(string: item.mideaUrl)!
+                        selectMuseItem = item
+                        isPlay = true
+                        if isShowPlayView == false {
+                            isShowPlayView = true
+                        }
                         
-                        Text(item.name)
-                            .foregroundColor(.primary)
-                            .font(.body)
-                            .lineLimit(1)
-                            .padding(.trailing,10)
-                        
-                        Spacer()
+                    } label: {
+                        HStack{
+                            Image("learn_home_muse_play")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .padding(10)
+                            
+                            Text(item.name)
+                                .foregroundColor(.primary)
+                                .font(.body)
+                                .lineLimit(1)
+                                .padding(.trailing,10)
+                            
+                            Spacer()
+                        }
                     }
                 }
             }
@@ -432,6 +457,46 @@ struct HomeVC: View {
                 }.padding(.leading,10)
             }
         }
+    }
+    
+    var audioView : some View {
+        ZStack(alignment: .topTrailing) {
+            ZStack {
+                Color("homeListBg").frame(maxWidth: .infinity,maxHeight: 90).frame(height: 90)
+                
+                HStack {
+                    VStack(alignment: .leading,spacing: 5) {
+                        Text(selectMuseItem.name).font(.body.weight(.medium))
+                        Text("冥想 | \(selectMuseTypeModel.name)").font(.subheadline).foregroundColor(.secondary)
+                    }.padding(.leading,10)
+                    Spacer()
+                    
+                    Button {
+                        isPlay.toggle()
+                    } label: {
+                        Image(isPlay ? "learn_pause":"learn_play")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                    }
+                    Spacer()
+                }
+            }
+            .frame(height: 90)
+            .cornerRadius(10)
+            .padding(.horizontal,10)
+            
+            Image("audio_play_card_close")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+                .offset(x: -7,y: -4)
+                .onTapGesture {
+                    isShowPlayView = false
+                    isPlay = false
+                }
+        }.offset(y: -64)
+        
     }
 }
 

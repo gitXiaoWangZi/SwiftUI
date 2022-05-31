@@ -12,6 +12,11 @@ struct HomeVC: View {
     @State var currentPage : Int = 0
     var imageArr : [String] = ["banner","edu_audio_bg","banner1"]
     @State var total : Int = 0
+    
+    @State var selectMuseTypeModel : museTypeItem = ModelData().homeListModel.museTypeList[0]
+    
+    var homeListModel = ModelData().homeListModel
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -29,14 +34,18 @@ struct HomeVC: View {
                 course
                 //精选话题
                 topic
+                
+                Color.clear.frame(height: 100)
             }
+            .navigationTitle("首页")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
     ///MARK - 头部轮播图
     var headerScroll : some View {
         TabView {
-            ForEach(0..<2,id: \.self) { idx in
+            ForEach(homeListModel.bannerList) { model in
                 Image("banner")
                     .resizable()
                     .scaledToFill()
@@ -118,15 +127,20 @@ struct HomeVC: View {
                 
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack(spacing: 10) {
-                        ForEach(0 ..< 5) { item in
-                            ZStack(alignment: .center) {
-                                Color.yellow.cornerRadius(11)
-                                
-                                Text("#第一案例降低#")
-                                    .font(.footnote)
-                                    .foregroundColor(.primary)
-                                    .padding(.horizontal,20)
-                            }.frame(height: 23)
+                        ForEach(homeListModel.museTypeList) { item in
+                            
+                            Button {
+                                selectMuseTypeModel = item
+                            } label: {
+                                ZStack(alignment: .center) {
+                                    Color("homeListBg").cornerRadius(11)
+                                    
+                                    Text(item.name)
+                                        .font(.footnote)
+                                        .foregroundColor(.primary)
+                                        .padding(.horizontal,20)
+                                }.frame(height: 23)
+                            }
                         }
                     }.padding(.leading,10)
                 }
@@ -134,7 +148,7 @@ struct HomeVC: View {
             
             VStack(spacing:0) {
                 
-                ForEach(0 ..< 3) { item in
+                ForEach(selectMuseTypeModel.museList) { item in
                     HStack{
                         Image("learn_home_muse_play")
                             .resizable()
@@ -142,7 +156,7 @@ struct HomeVC: View {
                             .frame(width: 20, height: 20)
                             .padding(10)
                         
-                        Text("熬夜速睡*8分钟男熬夜速睡*8分钟男生")
+                        Text(item.name)
                             .foregroundColor(.primary)
                             .font(.body)
                             .lineLimit(1)
@@ -182,12 +196,13 @@ struct HomeVC: View {
                 }
             }
             TabView{
-                ForEach(0 ..< 5,id: \.self) { item in
+                ForEach(homeListModel.liveList) { item in
                     ZStack {
                         Image("")
                             .resizable()
                             .frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
-                            .background(.yellow)
+                            .background(Color("homeListBg"))
+                            .cornerRadius(10)
                         
                         VStack(alignment: .leading,spacing: 5) {
                             HStack(spacing: 0) {
@@ -195,7 +210,7 @@ struct HomeVC: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width:20,height: 20)
-                                Text("直播中")
+                                Text(item.liveStatus == 1 ? "待直播" : "直播中")
                                     .font(.footnote)
                                     .foregroundColor(.white)
                                     .padding(.leading,5)
@@ -203,17 +218,17 @@ struct HomeVC: View {
                             .padding(5)
                             .background(.black.opacity(0.5))
                             Spacer()
-                            Text("竹山夹袄地势低his")
+                            Text(item.name)
                                 .foregroundColor(.white)
                                 .padding(.leading,10)
                             HStack {
-                                Text("2022-10-03").font(.footnote).foregroundColor(.white).padding(.leading,10)
+                                Text(item.liveTime).font(.footnote).foregroundColor(.white).padding(.leading,10)
                                 Spacer()
                                 Image("learn_home_people")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 16, height: 16)
-                                Text("29")
+                                Text("\(item.userCount)")
                                     .font(.footnote)
                                     .foregroundColor(.white)
                                     .padding(.trailing,10)
@@ -221,6 +236,23 @@ struct HomeVC: View {
                         }
                     }.padding(10)
                 }
+                ZStack {
+                    Image("banner")
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
+                        .background(Color("homeListBg"))
+                        .cornerRadius(10)
+                    
+                    VStack(spacing: 10) {
+                        Image("learn_check_replay")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:40,height: 40)
+                        Text("查看回放")
+                            .font(.footnote)
+                            .foregroundColor(.white)
+                    }
+                }.padding(10)
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .frame(maxWidth: .infinity,maxHeight: 140)
                 .frame(height: 140)
@@ -255,14 +287,14 @@ struct HomeVC: View {
             }
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 10) {
-                    ForEach(0 ..< 5) { item in
+                    ForEach(homeListModel.liveGoodList) { item in
                         VStack {
                             ZStack(alignment: .bottomLeading) {
                                 Image("")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(maxHeight: .infinity)
-                                    .background(.red)
+                                    .background(Color("homeListBg"))
                                     .cornerRadius(10)
                                 
                                 Image("learn_video_play")
@@ -273,7 +305,7 @@ struct HomeVC: View {
                                     .padding(5)
                             }.frame(height: 105)
                             
-                            Text("2021.1.12第一案例降低")
+                            Text(item.name)
                                 .font(.footnote)
                                 .foregroundColor(.primary)
                                 .padding(3)
@@ -312,9 +344,9 @@ struct HomeVC: View {
                 }
             }.padding(5)
             TabView{
-                ForEach(0 ..< 5) { item in
+                ForEach(homeListModel.curriculumList) { item in
                     ZStack {
-                        Color.yellow
+                        Color("homeListBg")
                             .frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
                             .cornerRadius(10)
                         
@@ -324,8 +356,9 @@ struct HomeVC: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(maxHeight: .infinity)
-                                    .frame(width:100)
+                                    .frame(width:80)
                                     .background(.red)
+                                    .cornerRadius(5)
                                 
                                 Text("视频课")
                                     .font(.footnote)
@@ -333,15 +366,15 @@ struct HomeVC: View {
                                     .padding(3)
                                     .background(.black.opacity(0.5))
                                     .padding(2)
-                                    .cornerRadius(5)
+                                    .cornerRadius(20)
                             }
                             
                             VStack(alignment: .leading) {
-                                Text("幸福到场")
+                                Text(item.name)
                                     .font(.body.weight(.medium))
                                     .padding(.top,10)
                                     .padding(5)
-                                Text("大咖驾到，带你知己教育真相")
+                                Text(item.introduce)
                                     .font(.subheadline.weight(.medium))
                                     .foregroundColor(.secondary)
                                     .padding(5)
@@ -386,11 +419,11 @@ struct HomeVC: View {
             }
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 10) {
-                    ForEach(0 ..< 5) { item in
+                    ForEach(homeListModel.topicList) { item in
                         ZStack(alignment: .center) {
-                            Color.yellow.cornerRadius(17)
+                            Color("homeListBg").cornerRadius(17)
                             
-                            Text("#2021.1.12第一案例降低#")
+                            Text(item.name)
                                 .font(.footnote)
                                 .foregroundColor(.primary)
                                 .padding(.horizontal,20)

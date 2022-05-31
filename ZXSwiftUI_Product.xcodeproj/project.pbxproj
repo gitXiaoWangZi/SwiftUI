@@ -44,6 +44,8 @@
 		4B005756284313260054304A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005755284313260054304A /* Tab.swift */; };
 		4B00575A284490C30054304A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B005759284490C30054304A /* LoginPage.swift */; };
 		4B0057682845C49A0054304A /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0057672845C49A0054304A /* TempView.swift */; };
+		4B00576B2845F2F90054304A /* HomeListData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B00576A2845F2F90054304A /* HomeListData.json */; };
+		4B00576E2845F39B0054304A /* HomeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B00576D2845F39B0054304A /* HomeListModel.swift */; };
 		4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */; };
 		4BD7AD5C283F245D00EE63FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5B283F245D00EE63FE /* ContentView.swift */; };
 		4BD7AD5E283F245E00EE63FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7AD5D283F245E00EE63FE /* Assets.xcassets */; };
@@ -92,6 +94,8 @@
 		4B005755284313260054304A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		4B005759284490C30054304A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		4B0057672845C49A0054304A /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		4B00576A2845F2F90054304A /* HomeListData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HomeListData.json; sourceTree = "<group>"; };
+		4B00576D2845F39B0054304A /* HomeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListModel.swift; sourceTree = "<group>"; };
 		4BD7AD56283F245D00EE63FE /* ZXSwiftUI_Product.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXSwiftUI_Product.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD7AD59283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZXSwiftUI_ProductApp.swift; sourceTree = "<group>"; };
 		4BD7AD5B283F245D00EE63FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 		4B00575D2844FCF40054304A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B00576C2845F3870054304A /* Home */,
 				4B0057642844FEFD0054304A /* Me */,
 				4B005755284313260054304A /* Tab.swift */,
 			);
@@ -271,6 +276,22 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4B0057692845F2E20054304A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4B00576A2845F2F90054304A /* HomeListData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4B00576C2845F3870054304A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4B00576D2845F39B0054304A /* HomeListModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		4BD7AD4D283F245D00EE63FE = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +311,7 @@
 		4BD7AD58283F245D00EE63FE /* ZXSwiftUI_Product */ = {
 			isa = PBXGroup;
 			children = (
+				4B0057692845F2E20054304A /* Data */,
 				4B0057632844FEB20054304A /* Types */,
 				4B0057622844FE7E0054304A /* Components */,
 				4B00575B2844FC3C0054304A /* Navigation */,
@@ -396,6 +418,7 @@
 				4BD7AD61283F245E00EE63FE /* Preview Assets.xcassets in Resources */,
 				4BD7AD5E283F245E00EE63FE /* Assets.xcassets in Resources */,
 				4B00571B284066600054304A /* landmarkData.json in Resources */,
+				4B00576B2845F2F90054304A /* HomeListData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +459,7 @@
 				4B00572F2840A6900054304A /* BadgeBackground.swift in Sources */,
 				4B005710283F83A70054304A /* MeIconVC.swift in Sources */,
 				4BD7AD76283F25FD00EE63FE /* MessageVC.swift in Sources */,
+				4B00576E2845F39B0054304A /* HomeListModel.swift in Sources */,
 				4BD7AD5A283F245D00EE63FE /* ZXSwiftUI_ProductApp.swift in Sources */,
 				4B0057512842747A0054304A /* CavansPage.swift in Sources */,
 				4B0057352840ADC70054304A /* Badge.swift in Sources */,

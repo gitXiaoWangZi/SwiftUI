@@ -1,0 +1,455 @@
+{
+"bannerList": [
+    {
+        "id": "40dc57bd4bc442faa90795d0ba326343",
+        "name": "兴智家庭教育入选品牌强国",
+        "status": 0,
+        "createdAt": "2021-06-09 11:00:33",
+        "updatedAt": "2021-06-09 11:00:33",
+        "imageUrl": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/c7434cdfc5a94fa897a4ccc82ba1fd5b.png",
+        "dataType": 1,
+        "jumpUrl": "https://www.bsan.org.cn/brand/CY2021PWYYYSQGMAQ.html",
+        "orderNum": 1
+    },
+    {
+        "id": "0d18acb1a461417d9fb1f08a0d1edefd",
+        "name": "2020年度科技创新在线教育品牌",
+        "status": 0,
+        "createdAt": "2021-06-09 11:01:32",
+        "updatedAt": "2021-06-09 11:01:32",
+        "imageUrl": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/f3601cf64e754bec925f667643b6a099.png",
+        "dataType": 1,
+        "jumpUrl": "https://www.163.com/edu/article/FSRQHE4U0029985J.html",
+        "orderNum": 2
+    },
+    {
+        "id": "d93e36fbd79347269b242d7a32a2eab1",
+        "name": "电子宣传册",
+        "status": 0,
+        "createdAt": "2021-06-09 11:02:08",
+        "updatedAt": "2021-06-09 11:02:08",
+        "imageUrl": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/7b58320f68e94fb6aad5078b35c212e0.png",
+        "dataType": 1,
+        "jumpUrl": "https://flbook.com.cn/c/YU63rlQB7z",
+        "orderNum": 3
+    }
+],
+"continueList": [
+    {
+        "id": "2a42182f2c814c5c994dead9533cefc8",
+        "name": "名师课 · 苏丹名师课",
+        "type": 2,
+        "createdAt": "2022-05-30 10:19:16",
+        "imageUrl": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/14a3b2b1d79642e5a02659e796d9e361.png",
+        "orderNo": 1
+    },
+    {
+        "id": "b57f63f311174bfabf8cceb623de1af6",
+        "name": "名师课 · 曹宏心理学",
+        "type": 2,
+        "createdAt": "2022-05-30 10:20:11",
+        "imageUrl": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/ff44528ebcf14a0d8658c7fec3b135c3.png",
+        "orderNo": 2
+    }
+],
+"liveList": [
+    {
+        "id": "c744b0b4499e47a48fbb599cdaabe7bc",
+        "name": "西南西北解释解释练习",
+        "coachId": "97074fb3e72e4570a75505fd8482e2c6",
+        "liveTime": "2022-05-31 14:50:00",
+        "liveStatus": 1,
+        "userCount": 3,
+        "coachName": "主持人",
+        "coachImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/f5e13f287f8d45b6aa879ad49f15b78b.jpg",
+        "liveTimeStr": "2022-05-31 14:50"
+    }
+],
+"liveGoodList": [
+    {
+        "id": "fa9642fb3236433cadb41d0957664bf7",
+        "name": "2021.1.12第一案例",
+        "updatedAt": "2021-06-09 17:05:22",
+        "backUrl": "http://ossmidea.xingzhijiaoyu.net/002a0efad9554604be7433fa17417356.mp4",
+        "liveTypeId": "5e1ffedd9d014a14a61af4fbcb0d508e",
+        "liveTimeStr": "2021-06-09",
+        "liveTypeName": "早恋"
+    },
+    {
+        "id": "71f54fcc1c38408eab5a954e23683a11",
+        "name": "2020.12.22第二案例",
+        "updatedAt": "2021-06-09 16:50:23",
+        "backUrl": "http://ossmidea.xingzhijiaoyu.net/0810f4eb18744865ae83ece1d2451c68.mp4",
+        "liveTypeId": "c379f4a223cc4785b1f6b346c44e2ad8",
+        "liveTimeStr": "2021-06-09",
+        "liveTypeName": "不良嗜好"
+    },
+    {
+        "id": "ccdd5fac88bb4b21a860c56d559e5d55",
+        "name": "2021.1.12第二案例",
+        "updatedAt": "2021-05-20 10:31:18",
+        "backUrl": "http://ossmidea.xingzhijiaoyu.net/203e5cd7805e4052b07f185a2e8262ee.mp4",
+        "liveTypeId": "a01224753bb546608ffb4ad01c420baf",
+        "liveTimeStr": "2021-05-20",
+        "liveTypeName": "抑郁"
+    },
+    {
+        "id": "fce561318397447ea894916675ee4b99",
+        "name": "2021.1.26第一案例",
+        "updatedAt": "2021-05-19 18:07:02",
+        "backUrl": "http://ossmidea.xingzhijiaoyu.net/e60ad2b863a942358c966d0a7f303fcd.mp4",
+        "liveTypeId": "a01224753bb546608ffb4ad01c420baf",
+        "liveTimeStr": "2021-05-19",
+        "liveTypeName": "抑郁"
+    },
+    {
+        "id": "aa427b80700c4373b87fe17f6f11d422",
+        "name": "2020.12.8第二案例",
+        "updatedAt": "2021-05-19 15:49:19",
+        "backUrl": "http://ossmidea.xingzhijiaoyu.net/2e1fe6f9eac9430ea82f887b444c22f2.mp4",
+        "liveTypeId": "900fd85ad37341bcb41d811d50f4eec5",
+        "liveTimeStr": "2021-05-19",
+        "liveTypeName": "厌学"
+    },
+    {
+        "id": "3385378380c6419182f89fa6c43507ac",
+        "name": "2020.12.8第一案例",
+        "updatedAt": "2021-05-19 15:34:43",
+        "backUrl": "http://ossmidea.xingzhijiaoyu.net/35e41352158e4c93b904ab405f4608f7.mp4",
+        "liveTypeId": "900fd85ad37341bcb41d811d50f4eec5",
+        "liveTimeStr": "2021-05-19",
+        "liveTypeName": "厌学"
+    }
+],
+"mailNum": 74,
+"topicList": [
+    {
+        "id": "5009980b6d894f569b18a9fedf795573",
+        "name": "#当今社会的孩子为什么如此多的“玻璃心”",
+        "status": 0,
+        "createdAt": "2021-06-11 17:09:51",
+        "updatedAt": "2021-06-11 17:09:51",
+        "num": 1,
+        "hot": 1,
+        "content": "",
+        "stage": "8,9,10"
+    },
+    {
+        "id": "61c946b4ff4e4684b53d19b1a684be3c",
+        "name": "#如何与孩子互动：“你可以玩，但必须写作业。”",
+        "status": 0,
+        "createdAt": "2021-06-11 17:09:34",
+        "updatedAt": "2021-06-11 17:09:34",
+        "num": 1,
+        "hot": 1,
+        "content": "",
+        "stage": "8,9,10"
+    },
+    {
+        "id": "e171175ffbb744f49e5e85830aadcfef",
+        "name": "#什么才是真正的穷养与富养",
+        "status": 0,
+        "createdAt": "2021-06-11 17:08:58",
+        "updatedAt": "2021-06-11 17:08:58",
+        "num": 0,
+        "hot": 1,
+        "content": "",
+        "stage": "8,9,10"
+    }
+],
+"curriculumList": [
+    {
+        "id": "08ff80a9ca2946a2854697ba751f6156",
+        "name": "幸福到场",
+        "status": 0,
+        "type": 2,
+        "createdAt": "2020-08-10 17:48:30",
+        "updatedAt": "2022-05-30 18:15:05",
+        "introduce": "大咖云集，带你直击教育真相。",
+        "smallImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/87600c6b671e4374b32682948631a407.png",
+        "showImage": "",
+        "feeStatus": 0,
+        "authorName": "导师团",
+        "authorTitle": "兴智教育",
+        "orderNum": 1
+    },
+    {
+        "id": "332128a6ccb948f6bd4ad266f0eb06ca",
+        "name": "皮爸皮妈坐弹会",
+        "status": 0,
+        "type": 2,
+        "createdAt": "2020-08-10 17:38:46",
+        "updatedAt": "2021-01-04 16:49:16",
+        "introduce": "不做劳心父母，只做调皮爸妈。",
+        "smallImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/a3eeece7f8d343f484167b26c0f9bf99.png",
+        "showImage": "",
+        "feeStatus": 0,
+        "authorName": "胡剑云",
+        "authorTitle": "兴智教育",
+        "orderNum": 2
+    },
+    {
+        "id": "3b4a0c1304d748bc9e72212626a526c0",
+        "name": "教育孩子爸爸也是主角",
+        "status": 0,
+        "type": 1,
+        "createdAt": "2020-08-06 15:00:28",
+        "updatedAt": "2021-01-04 16:49:22",
+        "introduce": "别让孩子患上“缺乏父爱综合症”。爸爸再忙，也要抽出时间陪伴孩子。",
+        "smallImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/5af5720e1dac4bda820e77d3cf7c7fd3.png",
+        "showImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/42fd1f8027b24d8eb4f65735ef448180.png",
+        "feeStatus": 0,
+        "authorName": "张晓祥",
+        "authorTitle": "兴智家庭教育指导师督导",
+        "orderNum": 3
+    },
+    {
+        "id": "460393f07588489cbe121efe813ae570",
+        "name": "教你做一个会解决问题的好家长",
+        "status": 0,
+        "type": 1,
+        "createdAt": "2020-08-06 15:12:59",
+        "updatedAt": "2021-01-04 16:49:28",
+        "introduce": "面对孩子的问题，家长一定要找准方法。兴智教育结合多年的教育经验，从根源出发，教你做一个智慧父母。",
+        "smallImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/413a0aae1d7545c8a92d7ef6b62e8221.png",
+        "showImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/5bf41c74a90a4a14b523e9f32b4a3243.png",
+        "feeStatus": 0,
+        "authorName": "名师团",
+        "authorTitle": "兴智家庭教育",
+        "orderNum": 4
+    },
+    {
+        "id": "4a4c5d3e4aa041f0a659d5ed47dc7a73",
+        "name": "疫情之下",
+        "status": 0,
+        "type": 1,
+        "createdAt": "2020-06-18 15:21:00",
+        "updatedAt": "2022-05-30 18:15:39",
+        "introduce": "疫情在家正确的教子方式",
+        "smallImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/9fe2a6c07fcc499c9ceb566f3acf6a3d.png",
+        "showImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/ccd1a1829cc84acbbb0cd8b3ed38bedf.jpg",
+        "feeStatus": 0,
+        "authorName": "徐英",
+        "authorTitle": "家庭教育总督导",
+        "orderNum": 5
+    },
+    {
+        "id": "8e984c39c26643bdb795d0cbc0659dd8",
+        "name": "兴智传承毕业礼",
+        "status": 0,
+        "type": 2,
+        "createdAt": "2020-08-11 09:46:35",
+        "updatedAt": "2021-01-04 16:49:39",
+        "introduce": "一场别开生面的聚会，更多教子干货等着你。",
+        "smallImage": "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/3f97677013e14e0899b15bb18d4e1359.png",
+        "showImage": "",
+        "feeStatus": 0,
+        "authorName": "兴智教育",
+        "authorTitle": "兴智教育",
+        "orderNum": 6
+    }
+],
+"museTypeList": [
+    {
+        "id": "1",
+        "name": "8分钟速睡",
+        "status": 0,
+        "updatedAt": "2022-04-06 10:38:42",
+        "orderNo": 1,
+        "museList": [
+            {
+                "id": "f1c4e4ac57af43189994d214f90f395d",
+                "name": "熬夜速睡·8分钟男声·高效休息·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:40:52",
+                "updatedAt": "2022-04-08 14:40:52",
+                "museTypeId": "1",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/efb2398ae17344b88835599ba9831ead.mp3"
+            },
+            {
+                "id": "50fc8b3c13e344f0a973c47e603a02fe",
+                "name": "放空大脑·8分钟男声·快速入睡·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:41:55",
+                "updatedAt": "2022-04-08 14:41:55",
+                "museTypeId": "1",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/6d294241c001494982898b51ab88c6b1.mp3"
+            },
+            {
+                "id": "5815df16d8b1477086e5c49f6c527d22",
+                "name": "提升精力·8分钟·高质量睡眠·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:42:44",
+                "updatedAt": "2022-04-08 14:42:44",
+                "museTypeId": "1",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/aeaa0cf1302848c587365ac3297f7a90.mp3"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "超长伴睡",
+        "status": 0,
+        "updatedAt": "2022-04-08 14:37:22",
+        "orderNo": 2,
+        "museList": [
+            {
+                "id": "a38596545e6242cb8f41d6ef559f6239",
+                "name": "熬夜速睡·30分钟·高效休息·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:45:07",
+                "updatedAt": "2022-04-08 14:45:07",
+                "museTypeId": "2",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/fe81d64cb4384fdc9b311cae3f70d3e2.mp3"
+            },
+            {
+                "id": "5e4fec1df09a4bb4b99e8718138166b4",
+                "name": "提升精力·30分钟·高质量睡眠·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:47:31",
+                "updatedAt": "2022-04-08 14:47:31",
+                "museTypeId": "2",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/4f8c3836ae944c22b533157c87ae9163.mp3"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "缓解焦虑",
+        "status": 0,
+        "updatedAt": "2022-04-06 10:39:08",
+        "orderNo": 3,
+        "museList": [
+            {
+                "id": "d98a4c284a3c4cd4962d9246572ed2dc",
+                "name": "改善情绪·助眠安睡·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:49:42",
+                "updatedAt": "2022-04-08 14:49:42",
+                "museTypeId": "3",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/50bfbc325de94373ad23c3b95c450ff5.mp3"
+            },
+            {
+                "id": "f6f90ce4ac6642de89019ff092a28209",
+                "name": "驱散焦虑·助眠解压·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:51:11",
+                "updatedAt": "2022-04-08 14:51:11",
+                "museTypeId": "3",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/4f3fb461d62940978b7185357736e57e.mp3"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "助眠放松",
+        "status": 0,
+        "updatedAt": "2022-04-06 10:39:18",
+        "orderNo": 4,
+        "museList": [
+            {
+                "id": "32b70e242d7043cba6b6dd34624c6a82",
+                "name": "缓解紧张·助眠放松·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:54:07",
+                "updatedAt": "2022-04-08 14:54:07",
+                "museTypeId": "4",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/c0c03470f2e94a05ae4c9ff3410e39a2.mp3"
+            },
+            {
+                "id": "35c4537e0c2949b9afbea988dc8afa9d",
+                "name": "深度放松·改善浅睡·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:56:06",
+                "updatedAt": "2022-04-08 14:56:06",
+                "museTypeId": "4",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/5b96dc83037d45bb809187b355d66dc7.mp3"
+            }
+        ]
+    },
+    {
+        "id": "d0879238d6644525b9847e377b54129e",
+        "name": "静心冥想",
+        "status": 0,
+        "createdAt": "2022-04-03 16:09:56",
+        "updatedAt": "2022-04-06 10:40:21",
+        "orderNo": 5,
+        "museList": [
+            {
+                "id": "d78c67c5e5634133a415d25be19f6e09",
+                "name": "轻松入睡·降低兴奋·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:57:57",
+                "updatedAt": "2022-04-08 14:57:57",
+                "museTypeId": "d0879238d6644525b9847e377b54129e",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/d695b4554d514ff3a4ddaef9bd055ae2.mp3"
+            },
+            {
+                "id": "7c9e9562fb1f4980b1b0874bf4a15cdf",
+                "name": "深度睡眠·缓解焦虑·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 14:59:34",
+                "updatedAt": "2022-04-08 14:59:34",
+                "museTypeId": "d0879238d6644525b9847e377b54129e",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/f6562da759404e5ba8bf293698d6c794.mp3"
+            }
+        ]
+    },
+    {
+        "id": "6c3f6b68acb944dd95cae195923351df",
+        "name": "白噪音",
+        "status": 0,
+        "createdAt": "2022-04-06 11:49:29",
+        "updatedAt": "2022-04-06 11:49:29",
+        "orderNo": 6,
+        "museList": [
+            {
+                "id": "e6e07a1efa5d412d9f200c1fdbdfa8f1",
+                "name": "山间的溪流·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 15:00:44",
+                "updatedAt": "2022-04-08 15:00:44",
+                "museTypeId": "6c3f6b68acb944dd95cae195923351df",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/dfc54870a3534d3084eeb38b788e6098.mp3"
+            },
+            {
+                "id": "bce7263792cf40598264da755993183d",
+                "name": "小镇的夜雨·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 15:01:37",
+                "updatedAt": "2022-04-08 15:01:37",
+                "museTypeId": "6c3f6b68acb944dd95cae195923351df",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/485c6c5116144febbf116fd2387e06e5.mp3"
+            }
+        ]
+    },
+    {
+        "id": "87d68f8275b94fcba5c0bbb1a359e149",
+        "name": "纯音乐",
+        "status": 0,
+        "createdAt": "2022-04-06 11:49:44",
+        "updatedAt": "2022-04-06 11:49:44",
+        "orderNo": 7,
+        "museList": [
+            {
+                "id": "ea4bc7033cc04bda9d07cc0b9d2c2fe4",
+                "name": "竖琴旁的摇篮·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 15:03:12",
+                "updatedAt": "2022-04-08 15:03:12",
+                "museTypeId": "87d68f8275b94fcba5c0bbb1a359e149",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/faae2db1e5ab47ca98e68ae6c498f3c7.mp3"
+            },
+            {
+                "id": "d47cf704aaba463a8c4c55941284c487",
+                "name": "天空之城的星夜·静心冥想",
+                "status": 0,
+                "createdAt": "2022-04-08 15:04:06",
+                "updatedAt": "2022-04-08 15:04:06",
+                "museTypeId": "87d68f8275b94fcba5c0bbb1a359e149",
+                "mideaUrl": "http://ossaudio.xingzhijiaoyu.net/c9a02ae186da4aa9b3a3078f7113c42c.mp3"
+            }
+        ]
+    }
+]
+}

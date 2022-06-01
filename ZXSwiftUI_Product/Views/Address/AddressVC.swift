@@ -9,17 +9,24 @@ import SwiftUI
 
 struct AddressVC: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .safeAreaInset(edge: .top) {
-                Color.clear.frame(height: 50)
-            }
-            .overlay(
-                NavigationBar(rightNavIcon: "phone.and.waveform", title: "通讯录")
-            )
-            .safeAreaInset(edge: .bottom) {
-                Color.clear.frame(height: 55)
-            }
+        LazyVStack {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
+            AsyncImage(url: URL(string: "http://amcimg.xingzhijiaoyu.net/commFile/oss/image/download/c7434cdfc5a94fa897a4ccc82ba1fd5b.png"))
+                .frame(width: 100, height: 100, alignment: .center)
+                .scaledToFit()
+                .clipped()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .safeAreaInset(edge: .top) {
+            Color.clear.frame(height: 50)
+        }
+        .overlay(
+            NavigationBar(rightNavIcon: "phone.and.waveform", title: "通讯录")
+        )
+        .safeAreaInset(edge: .bottom) {
+            Color.clear.frame(height: 55)
+        }
     }
 }
 

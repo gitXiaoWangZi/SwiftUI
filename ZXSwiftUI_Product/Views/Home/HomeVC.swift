@@ -42,7 +42,6 @@ struct HomeVC: View {
                     course
                     //精选话题
                     topic
-                    
                 }
                 
                 if isShowPlayView {
@@ -68,23 +67,30 @@ struct HomeVC: View {
     var headerScroll : some View {
         TabView {
             ForEach(homeListModel.bannerList) { model in
-                Image("banner")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width - 40, height: 135)
+                LazyVStack {
+                    AsyncImage(url: URL(string: model.imageUrl)) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: UIScreen.main.bounds.width - 20, height: (UIScreen.main.bounds.width - 20) / 2.78)
                     .cornerRadius(20)
+                }
             }
         }
         .tabViewStyle(PageTabViewStyle())
-        .frame(maxWidth: .infinity,maxHeight: 135)
-        .frame(height: 135)
+        .frame(maxWidth: .infinity,maxHeight: (UIScreen.main.bounds.width - 20) / 2.78)
+        .frame(height: (UIScreen.main.bounds.width - 20) / 2.78)
     }
     
     var studyTask : some View {
-        VStack(spacing: 0) {
+        
+        LazyVStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("本周学习任务")
-                    .font(.body.weight(.medium))
+                Text("**本周学习任务**")
+//                    .font(.body.weight(.medium))
                     .foregroundColor(.primary)
                     .padding(.leading,10)
                 Spacer()
@@ -141,8 +147,7 @@ struct HomeVC: View {
     var thinking : some View {
         VStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("冥想")
-                    .font(.body.weight(.medium))
+                Text("**冥想**")
                     .foregroundColor(.primary)
                     .padding(.leading,10)
                 Spacer()
@@ -173,7 +178,7 @@ struct HomeVC: View {
                 ForEach(selectMuseTypeModel.museList) { item in
                     
                     Button {
-//                        let url = URL(string: item.mideaUrl)!
+                        //                        let url = URL(string: item.mideaUrl)!
                         selectMuseItem = item
                         isPlay = true
                         if isShowPlayView == false {
@@ -203,10 +208,9 @@ struct HomeVC: View {
     }
     
     var Living : some View {
-        VStack(spacing: 0) {
+        LazyVStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("案例会直播")
-                    .font(.body.weight(.medium))
+                Text("**案例会直播**")
                     .foregroundColor(.primary)
                     .padding(.leading,10)
                 Spacer()
@@ -231,11 +235,15 @@ struct HomeVC: View {
             TabView{
                 ForEach(homeListModel.liveList) { item in
                     ZStack {
-                        Image("")
-                            .resizable()
-                            .frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
-                            .background(Color("homeListBg"))
-                            .cornerRadius(10)
+                        AsyncImage(url: URL(string: item.coachImage)) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            ProgressView()
+                        }.frame(width: UIScreen.main.bounds.width - 20, height: 140, alignment: .center)
+                        .background(Color("homeListBg"))
+                        .cornerRadius(10)
                         
                         VStack(alignment: .leading,spacing: 5) {
                             HStack(spacing: 0) {
@@ -295,7 +303,7 @@ struct HomeVC: View {
     var highQuality : some View {
         VStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("精品案例会")
+                Text("**精品案例会**")
                     .font(.body.weight(.medium))
                     .foregroundColor(.primary)
                     .padding(.leading,10)
@@ -353,8 +361,7 @@ struct HomeVC: View {
     var course : some View {
         VStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("精品课程")
-                    .font(.body.weight(.medium))
+                Text("**精品课程**")
                     .foregroundColor(.primary)
                     .padding(.leading,10)
                 Spacer()
@@ -383,15 +390,18 @@ struct HomeVC: View {
                             .frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
                             .cornerRadius(10)
                         
-                        HStack(alignment: .top) {
+                        LazyHStack(alignment: .top) {
                             ZStack(alignment: .bottomTrailing) {
-                                Image("")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxHeight: .infinity)
-                                    .frame(width:80)
-                                    .background(.red)
-                                    .cornerRadius(5)
+                                AsyncImage(url: URL(string: item.smallImage)) { image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                } placeholder: {
+                                    ProgressView()
+                                }
+                                .frame(maxHeight: .infinity)
+                                .frame(width:80)
+                                .cornerRadius(5)
                                 
                                 Text("视频课")
                                     .font(.footnote)
@@ -411,10 +421,9 @@ struct HomeVC: View {
                                     .font(.subheadline.weight(.medium))
                                     .foregroundColor(.secondary)
                                     .padding(5)
+                                    .padding(.trailing,10)
                             }
-                            
-                            Spacer()
-                        }
+                        }.frame(maxWidth: .infinity, alignment: .leading)
                     }.padding(.horizontal,10)
                 }
             }
@@ -427,8 +436,7 @@ struct HomeVC: View {
     var topic : some View {
         VStack(spacing: 0) {
             HStack(alignment: .center){
-                Text("精选话题")
-                    .font(.body.weight(.medium))
+                Text("**精选话题**")
                     .foregroundColor(.primary)
                     .padding(.leading,10)
                 Spacer()
@@ -503,8 +511,7 @@ struct HomeVC: View {
                     isShowPlayView = false
                     isPlay = false
                 }
-        }.offset(y: -64)
-        
+        }
     }
 }
 

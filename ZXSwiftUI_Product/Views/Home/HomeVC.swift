@@ -400,17 +400,19 @@ struct HomeVC: View {
                                             .cornerRadius(5)
                                     } placeholder: {
                                         ProgressView()
-                                    }
-                                    
-                                    Text("视频课")
-                                        .font(.footnote)
-                                        .foregroundColor(.white)
-                                        .padding(3)
-                                        .background(.black.opacity(0.5))
-                                        .padding(2)
-                                        .cornerRadius(20)
-                                        .offset(x:-60)
-                                        .padding(.trailing,-60)
+                                    }.overlay(
+                                        VStack(alignment: .trailing){
+                                            Spacer()
+                                            Text("视频课")
+                                                .font(.system(size: 11))
+                                                .foregroundColor(.white)
+                                                .padding(.horizontal,5)
+                                                .padding(.vertical,3)
+                                                .background(.black.opacity(0.5))
+                                                .cornerRadius(5)
+                                                .frame(maxWidth: .infinity,alignment: .trailing)
+                                        }
+                                    )
                                 }
                             
                             VStack(alignment: .leading) {
@@ -518,6 +520,6 @@ struct HomeVC: View {
 struct HomeVC_Previews: PreviewProvider {
     static var previews: some View {
         HomeVC()
-            .previewLayout(.sizeThatFits)
+            
     }
 }

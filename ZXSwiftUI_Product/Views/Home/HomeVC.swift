@@ -49,7 +49,7 @@ struct HomeVC: View {
                     audioView
                 }
                 
-            }
+            }.frame(width:UIScreen.main.bounds.width)
             .navigationBarHidden(true)
             .safeAreaInset(edge: .top) {
                 Color.clear.frame(height: 50)
@@ -390,37 +390,38 @@ struct HomeVC: View {
                             .frame(width: UIScreen.main.bounds.width - 20, height: 105, alignment: .center)
                             .cornerRadius(10)
                         
-                        LazyHStack(alignment: .top) {
-                            ZStack(alignment: .bottomTrailing) {
-                                AsyncImage(url: URL(string: item.smallImage)) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                .frame(maxHeight: .infinity)
-                                .frame(width:80)
-                                .cornerRadius(5)
+                        HStack(alignment: .top) {
                                 
-                                Text("视频课")
-                                    .font(.footnote)
-                                    .foregroundColor(.white)
-                                    .padding(3)
-                                    .background(.black.opacity(0.5))
-                                    .padding(2)
-                                    .cornerRadius(20)
-                            }
+                            LazyHStack(alignment: .bottom) {
+                                    AsyncImage(url: URL(string: item.smallImage)) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .cornerRadius(5)
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    
+                                    Text("视频课")
+                                        .font(.footnote)
+                                        .foregroundColor(.white)
+                                        .padding(3)
+                                        .background(.black.opacity(0.5))
+                                        .padding(2)
+                                        .cornerRadius(20)
+                                        .offset(x:-60)
+                                        .padding(.trailing,-60)
+                                }
                             
                             VStack(alignment: .leading) {
                                 Text(item.name)
                                     .font(.body.weight(.medium))
-                                    .padding(.top,10)
-                                    .padding(5)
+                                    .padding(10)
                                 Text(item.introduce)
                                     .font(.subheadline.weight(.medium))
                                     .foregroundColor(.secondary)
-                                    .padding(5)
+                                    .lineLimit(2)
+                                    .padding(.leading,10)
                                     .padding(.trailing,10)
                             }
                         }.frame(maxWidth: .infinity, alignment: .leading)
@@ -428,8 +429,7 @@ struct HomeVC: View {
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .frame(maxWidth: .infinity,maxHeight: 105)
-            .frame(height: 105)
+            .frame(width: UIScreen.main.bounds.width,height: 105)
         }
     }
     
